@@ -10,7 +10,6 @@ import 'package:flutter_rollbar/rollbar_log_level.dart';
 import 'package:flutter_rollbar/rollbar_person.dart';
 import 'package:flutter_rollbar/rollbar_telemetry.dart';
 import 'package:package_info/package_info.dart';
-import 'package:requests/requests.dart';
 
 export './rollbar_telemetry.dart';
 export './rollbar_person.dart';
