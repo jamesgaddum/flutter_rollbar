@@ -51,7 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _publishReport() async {
-    await Rollbar().publishReport(message: 'A Report');
+    await Rollbar().log(
+      message: 'A Report',
+      level: RollbarLogLevel.INFO
+    );
     showDialog(
       context: context,
       builder: (BuildContext context) => Material(

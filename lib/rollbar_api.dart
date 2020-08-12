@@ -2,14 +2,16 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter_rollbar/rollbar_types.dart';
+import 'package:flutter_rollbar/rollbar_log_level.dart';
+import 'package:flutter_rollbar/rollbar_person.dart';
 import 'package:requests/requests.dart';
 
 class RollbarApi {
-  Future sendReport({
+
+  Future sendMessage({
     @required String accessToken, 
-    @required String message, 
-    @required List<RollbarTelemetry> telemetry, 
+    @required dynamic data,
+    @required RollbarLogLevel level,
     Map clientData, 
     RollbarPerson person, 
     String environment
@@ -24,11 +26,9 @@ class RollbarApi {
           'framework': 'flutter',
           'language': 'dart',
           'body': {
-            'message': {
-              'body': message,
-            },
-            'telemetry': telemetry.map((item) => item.toJson()).toList(),
+            'message': data,
           },
+          'level': level.name,
           'person': person?.toJson(),
           'client': clientData,
           'notifier': {
