@@ -3,6 +3,7 @@ package io.flutter.plugins;
 import io.flutter.plugin.common.PluginRegistry;
 import io.flutter.plugins.deviceinfo.DeviceInfoPlugin;
 import io.flutter.plugins.packageinfo.PackageInfoPlugin;
+import io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin;
 
 /**
  * Generated file. Do not edit.
@@ -14,6 +15,7 @@ public final class GeneratedPluginRegistrant {
     }
     DeviceInfoPlugin.registerWith(registry.registrarFor("io.flutter.plugins.deviceinfo.DeviceInfoPlugin"));
     PackageInfoPlugin.registerWith(registry.registrarFor("io.flutter.plugins.packageinfo.PackageInfoPlugin"));
+    SharedPreferencesPlugin.registerWith(registry.registrarFor("io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin"));
   }
 
   private static boolean alreadyRegisteredWith(PluginRegistry registry) {
