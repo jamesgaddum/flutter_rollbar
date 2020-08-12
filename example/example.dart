@@ -55,11 +55,11 @@ class _MyHomePageState extends State<MyHomePage> {
     showDialog(
       context: context,
       builder: (BuildContext context) => Material(
-            child: Container(
-              padding: MediaQuery.of(context).padding,
-              child: Text('Report Submitted!'),
-            ),
-          ),
+        child: Container(
+          padding: MediaQuery.of(context).padding,
+          child: Text('Report Submitted!'),
+        ),
+      ),
     );
   }
 
@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.headline4,
             ),
             RaisedButton(
               onPressed: _publishReport,

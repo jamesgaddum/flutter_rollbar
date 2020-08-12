@@ -39,15 +39,15 @@ class RollbarTelemetry {
       : this.timestamp = timestamp ?? DateTime.now().millisecondsSinceEpoch;
 
   Map toJson() => {
-        'level': level.name,
-        'type': type.name,
-        'source': source,
-        'timestamp_ms': timestamp,
-        'body': {
-          'message': message,
-          'stack': stack,
-        },
-      };
+    'level': level.name,
+    'type': type.name,
+    'source': source,
+    'timestamp_ms': timestamp,
+    'body': {
+      'message': message,
+      'stack': stack,
+    },
+  };
 }
 
 class RollbarPerson {
