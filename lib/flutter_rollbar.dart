@@ -90,8 +90,6 @@ class Rollbar {
     var packageInfo = await PackageInfo.fromPlatform();
     
     _clientData = <String, dynamic>{
-      'code_version': packageInfo.buildNumber,
-      'name_version': packageInfo.version,
       'version_code': packageInfo.buildNumber,
       'version_name': packageInfo.version,
     };

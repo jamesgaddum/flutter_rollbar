@@ -1,19 +1,7 @@
+import 'package:flutter_rollbar/rollbar_log_level.dart';
 import 'package:meta/meta.dart';
 
-class RollbarLogLevel {
-  final String name;
 
-  const RollbarLogLevel(this.name);
-
-  @override
-  String toString() => name;
-
-  static const RollbarLogLevel CRITICAL = RollbarLogLevel('critical');
-  static const RollbarLogLevel ERROR = RollbarLogLevel('error');
-  static const RollbarLogLevel WARNING = RollbarLogLevel('warning');
-  static const RollbarLogLevel INFO = RollbarLogLevel('info');
-  static const RollbarLogLevel DEBUG = RollbarLogLevel('debug');
-}
 
 class RollbarTelemetryType {
   final String name;
@@ -50,14 +38,3 @@ class RollbarTelemetry {
   };
 }
 
-class RollbarPerson {
-  final String id, email, username;
-
-  RollbarPerson({@required this.id, this.email, this.username});
-
-  Map toJson() => {
-    'id': id,
-    'email': email,
-    'username': username,
-  };
-}
